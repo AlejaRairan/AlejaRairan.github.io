@@ -25,10 +25,8 @@
   max-width: 100%;
 }
 
-
 .aboutme__image-me {
   width: 100%;
-
 }
 .aboutme__buttons {
   display: flex;
@@ -49,19 +47,35 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .aboutme__content {
-      margin: 20px;
-      gap:0;
-
-    }
-    .aboutme__description {
-      width: 100%;
-    }
+  .aboutme__content {
+    margin: 20px;
+    gap: 0;
   }
+  .aboutme__description {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 769px) {
-    .aboutme__content {
+  .aboutme__content {
     display: block;
     margin: 10px;
+  }
 }
+@media screen and (min-width: 340px) and (max-width: 769px) {
+  .aboutme__title {
+    margin: 20px;
+    font-size: 30px;
+  }
+  .aboutme__buttons-click {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+  .aboutme__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+  }
 }

@@ -45,3 +45,11 @@
     margin: 20px;
 }
 }
+@media screen and (min-width: 340px) and (max-width: 769px) {
+.frameworks__title {
+    margin: 20px;
+    font-size: 30px;
+    
+  }
+}
+ 
