@@ -79,5 +79,8 @@
     display: block;
     margin: 10px;
   }
+  .projects__description-title{
+    line-height: 30px;
+  }
  
 }

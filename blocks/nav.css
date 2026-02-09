@@ -24,3 +24,15 @@
 .nav__link:hover {
   color: #2f80ed;
 }
+@media screen and (min-width: 340px) and (max-width: 769px) {
+  .nav {
+    justify-content: center;
+    margin:0;
+    padding:0;
+  }
+  .nav__links {
+    align-items: center;
+    gap: 10px;
+    padding:0;
+  }
+}
