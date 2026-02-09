@@ -61,7 +61,7 @@
 
 @media screen and (max-width: 769px) {
     .aboutme__content {
-    grid-template-columns: 1fr;
-    margin: 20px;
+    display: block;
+    margin: 10px;
 }
 }

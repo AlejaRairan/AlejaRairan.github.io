@@ -21,7 +21,6 @@
   margin: 25px 0 0 0;
 }
 
-
 .projects__description {
   width: 100%;
   max-width: 100%;
@@ -66,19 +65,19 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .projects__content {
-      margin: 20px;
-      gap:0;
-
-    }
-    .projects__description {
-      width: 100%;
-    }
-  }
-
-@media screen and (max-width: 769px) {
-    .projects__content {
-    grid-template-columns: 1fr;
+  .projects__content {
     margin: 20px;
+    gap: 0;
+  }
+  .projects__description {
+    width: 100%;
+  }
 }
+
+@media screen and (min-width: 340px) and (max-width: 769px) {
+  .projects__content {
+    display: block;
+    margin: 10px;
+  }
+ 
 }
