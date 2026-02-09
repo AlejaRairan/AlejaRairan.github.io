@@ -33,7 +33,7 @@
   font-family: "Noto Serif";
   font-style: italic;
   font-weight: normal;
-  font-size: 120px;
+  font-size: clamp(40px, 10vw, 120px);
   line-height: 72px;
   color: #57f502;
 }
@@ -95,10 +95,15 @@
   .header {
     background-attachment: scroll;
   }
+  .header__content {
+    margin-left: 0;
+    padding: 20px;
+  }
   .header__title {
     text-align: left;
     max-width: 100%;
     margin-bottom: 150px;
+    letter-spacing: 1px;
   }
 
   .header__text-content {
