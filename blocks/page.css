@@ -1,37 +1,63 @@
+/* Color palette: change these values to restyle the whole site */
+:root {
+  --color-bg: #0b1120;
+  --color-surface: #111a2e;
+  --color-border: #24314d;
+  --color-text: #e6edf6;
+  --color-text-muted: #9aa8bf;
+  --color-accent: #2dd4bf;
+  --color-accent-hover: #5eead4;
+  --color-on-accent: #042f2a;
+  --color-error: #f87171;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
 .page {
   width: 100%;
   margin: auto;
   font-family: "Inter", arial, sans-serif;
   font-size: 20px;
   line-height: 20px;
-  background-image: url(../images/background_header.svg);
-  background-color: #102a02;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
+
 h2 {
   font-size: 35px;
+  line-height: 1.2;
+}
+
+h3 {
+  line-height: 1.3;
+  color: var(--color-text);
 }
 
 a {
   text-decoration: none;
   font-size: 20px;
-  color: white;
+  color: var(--color-text);
 }
 
-p, li {
-  font-size: 23px;
+p,
+li {
+  font-size: 20px;
   line-height: 32px;
-}
-html, body {
-  overflow-x: hidden;
+  color: var(--color-text-muted);
 }
 
 @media screen and (min-width: 340px) and (max-width: 769px) {
-p {
-  
-    font-size: 20px;
-    
+  p,
+  li {
+    font-size: 18px;
+    line-height: 28px;
   }
 }

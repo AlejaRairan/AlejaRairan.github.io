@@ -1,0 +1,112 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+}
+
+.contact-form__label {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 0 10px;
+  color: var(--color-text);
+}
+
+.contact-form__label:first-child {
+  margin-top: 0;
+}
+
+.contact-form__input {
+  font-family: "Inter", arial, sans-serif;
+  font-size: 18px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+.contact-form__input_invalid {
+  border-color: var(--color-error);
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.contact-form__error {
+  min-height: 20px;
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--color-error);
+}
+
+/* Honeypot: visually hidden, still in the form */
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.contact-form__button {
+  font-family: "Inter", arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-on-accent);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 8px;
+  padding: 16px 30px;
+  width: 100%;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-form__button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.contact-form__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contact-form__status {
+  min-height: 32px;
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.contact-form__status_type_success {
+  color: var(--color-accent);
+}
+
+.contact-form__status_type_error {
+  color: var(--color-error);
+}
+
+@media screen and (max-width: 769px) {
+  .contact-form {
+    margin: 0 16px;
+    padding: 28px 20px;
+  }
+}

@@ -1,22 +1,38 @@
+/* Background made with CSS only: teal glows + a subtle grid, no image to load */
 .header {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
-    url(../images/authorsimage.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 80vh;
+  position: relative;
+  min-height: 80vh;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse 55% 60% at 85% 15%, rgba(45, 212, 191, 0.22), transparent 70%),
+    radial-gradient(ellipse 45% 50% at 5% 95%, rgba(56, 189, 248, 0.14), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+}
+
+/* Fades the grid out at the bottom so the header blends into the page */
+.header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 35%;
+  background: linear-gradient(transparent, var(--color-bg));
+  pointer-events: none;
 }
 
 .header__back-to-top {
   position: fixed;
-  bottom: 24px;
+  bottom: 96px;
   right: 24px;
+  z-index: 10;
   width: 48px;
   height: 48px;
-  background-color: #57f502;
-  color: #fff;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
   text-decoration: none;
   border-radius: 50%;
   display: flex;
@@ -24,25 +40,24 @@
   justify-content: center;
   font-size: 20px;
   cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.header__back-to-top:hover {
+  border-color: var(--color-accent);
+}
+
+.header__overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .header__content {
   margin-left: 30px;
 }
-.header__span-accent {
-  font-family: "Noto Serif";
-  font-style: italic;
-  font-weight: normal;
-  font-size: clamp(40px, 10vw, 120px);
-  line-height: 72px;
-  color: #57f502;
-}
 
-.header__overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .header__title {
   max-width: 900px;
   font-family: "Inter";
@@ -51,32 +66,43 @@
   font-size: clamp(36px, 8vw, 120px);
   line-height: clamp(40px, 7vw, 100px);
   letter-spacing: clamp(2px, 1vw, 10px);
+  color: var(--color-text);
 }
 
-.header__text-content {
-  display: flex;
-  align-items: center;
-  margin-top: 200px;
-  justify-content: space-around;
+.header__span-accent {
+  font-family: "Noto Serif";
+  font-style: italic;
+  font-weight: normal;
+  font-size: clamp(40px, 10vw, 120px);
+  line-height: 72px;
+  color: var(--color-accent);
 }
 
 .header__description {
   font-family: "Noto Serif";
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 32px;
   max-width: 750px;
   margin: 20px;
+  color: var(--color-text);
 }
+
 .header__button {
   display: inline-block;
-  padding: 25px 32px;
-  background-color: #102a02;
-  color: #fff;
+  padding: 20px 32px;
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-left: 30px;
+  transition: background-color 0.2s;
+}
+
+.header__button:hover {
+  background-color: var(--color-accent-hover);
 }
 
 @media screen and (min-width: 600px) and (max-width: 1152px) {
@@ -86,43 +112,42 @@
     align-items: center;
     justify-content: center;
   }
+
   .header__span-accent {
     font-size: 80px;
     line-height: 50px;
   }
 }
+
 @media screen and (min-width: 340px) and (max-width: 769px) {
-  .header {
-    background-attachment: scroll;
-  }
   .header__content {
     margin-left: 0;
     padding: 20px;
   }
+
   .header__title {
     text-align: left;
     max-width: 100%;
     letter-spacing: 1px;
   }
 
-  .header__text-content {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 60px;
+  .header__description {
+    font-size: 20px;
+    line-height: 28px;
   }
 
-  .header__description {
-    font-size: 23px;
-    line-height: 24px;
-    }
-  
-.header__span-accent {
+  .header__span-accent {
     font-size: 50px;
     line-height: 50px;
   }
-.header__button{
-  padding: 15px 20px;
-  font-size: 16px;
-  align-items: center;
-}
+
+  .header__button {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .header__back-to-top {
+    bottom: 84px;
+    right: 16px;
+  }
 }
