@@ -1,7 +1,7 @@
 import { getImage } from "../utils/assets.js";
 import resume from "../../docs/Alejandra_Rairan_Resume.pdf";
 
-const LINKEDIN_URL = "https://www.linkedin.com/in/alejandra-rairan-ni%C3%B1o-/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/alejandrarairan/?locale=en-US";
 
 function AboutMe() {
   return (

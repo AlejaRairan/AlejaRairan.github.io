@@ -4,7 +4,7 @@ const socialLinks = [
   { name: "GitHub", url: "https://github.com/AlejaRairan", icon: "github.svg" },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/alejandra-rairan-ni%C3%B1o-/",
+    url: "https://www.linkedin.com/in/alejandrarairan/?locale=en-US",
     icon: "linkedin.svg",
   },
 ];
